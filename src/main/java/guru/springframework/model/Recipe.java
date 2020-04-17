@@ -1,6 +1,7 @@
 package guru.springframework.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -23,6 +24,9 @@ public class Recipe {
     private String url;
     private String directions;
     // TODO add Difficulty
+
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
+    private Set<Ingriedient> ingriedients;
 
     @Lob
     private Byte[] image;
@@ -100,5 +104,21 @@ public class Recipe {
 
     public void setNotes(Notes notes) {
         this.notes = notes;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Set<Ingriedient> getIngriedients() {
+        return ingriedients;
+    }
+
+    public void setIngriedients(Set<Ingriedient> ingriedients) {
+        this.ingriedients = ingriedients;
     }
 }
