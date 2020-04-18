@@ -10,7 +10,7 @@ import java.math.BigDecimal;
  * in project spring5-recipe-app
  */
 @Entity
-public class Ingriedient {
+public class Ingredient {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,6 +24,13 @@ public class Ingriedient {
 
     @ManyToOne
     private Recipe recipe;
+
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure, Recipe recipe) {
+        this.description = description;
+        this.amount = amount;
+        this.unitOfMeasure = unitOfMeasure;
+        this.recipe = recipe;
+    }
 
     public Long getId() {
         return id;
