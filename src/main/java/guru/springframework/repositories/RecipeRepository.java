@@ -10,5 +10,4 @@ import org.springframework.data.repository.CrudRepository;
  * in project spring5-recipe-app
  */
 public interface RecipeRepository extends CrudRepository<Recipe, Long> {
-
 }
