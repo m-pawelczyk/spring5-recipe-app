@@ -1,5 +1,6 @@
 package guru.springframework.model;
 
+import lombok.Builder;
 import lombok.Data;
 
 import javax.persistence.*;

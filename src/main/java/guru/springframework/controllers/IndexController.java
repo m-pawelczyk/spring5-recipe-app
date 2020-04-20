@@ -1,6 +1,7 @@
 package guru.springframework.controllers;
 
 import guru.springframework.model.Category;
+import guru.springframework.model.Recipe;
 import guru.springframework.model.UnitOfMeasure;
 import guru.springframework.repositories.CategoryRepository;
 import guru.springframework.repositories.UnitOfMeasureRepository;
@@ -11,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.Optional;
+import java.util.Set;
 
 /**
  * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
@@ -32,9 +34,10 @@ public class IndexController {
     public String getIndexPage(Model model) {
         log.debug("Getting Index page");
 
-        model.addAttribute("recipes", recipeService.getRecipes());
+        Set<Recipe> returnedRecipes = recipeService.getRecipes();
+        model.addAttribute("recipes", returnedRecipes);
 
-        log.debug("Return", recipeService.getRecipes().size(), "to index page");
+        log.debug("Return", returnedRecipes.size(), "to index page");
         return "index";
     }
 }
