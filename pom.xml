@@ -78,9 +78,9 @@
 					<includes>
 						<include>**/*ITest.java</include>
 					</includes>
-<!--					<additionalClasspathElements>-->
-<!--						<additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>-->
-<!--					</additionalClasspathElements>-->
+					<additionalClasspathElements>
+						<additionalClasspathElement>${basedir}/target/classes</additionalClasspathElement>
+					</additionalClasspathElements>
 					<parallel>none</parallel>
 				</configuration>
 				<executions>
