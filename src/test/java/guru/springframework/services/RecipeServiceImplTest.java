@@ -17,6 +17,12 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 
+/**
+ * m-pawelczyk (GitGub) / m_pawelczyk (Twitter)
+ * on 25.04.2020
+ * created RecipeServiceImplTest in guru.springframework.services
+ * in project spring5-recipe-app
+ */
 public class RecipeServiceImplTest {
 
     RecipeServiceImpl recipeService;
