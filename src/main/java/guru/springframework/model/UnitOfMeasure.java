@@ -1,6 +1,7 @@
 package guru.springframework.model;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +14,8 @@ import javax.persistence.Id;
  * created UnitOfMeasure in guru.springframework.model
  * in project spring5-recipe-app
  */
-@Data
+@Getter
+@Setter
 @Entity
 public class UnitOfMeasure {
 
